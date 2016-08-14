@@ -3,4 +3,4 @@ jdk:
   - oraclejdk8
 after_success:
   - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
-  - bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
+  - bash <(curl -s https://codecov.io/bash) -t f120b77d-4127-4e4b-a1db-4dac9e0a450b
