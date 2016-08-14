@@ -2,7 +2,7 @@ plugins {
     id 'net.saliman.cobertura' version '2.2.5'
     id 'com.github.kt3k.coveralls' version '2.0.1'
 }
-
+apply plugin: 'jacoco'
 apply plugin: 'java'
 apply plugin: 'maven'
 group = 'com.github.memoizr'
@@ -16,6 +16,12 @@ repositories {
     mavenCentral()
     jcenter()
     maven { url "https://jitpack.io" }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
 
 dependencies {
